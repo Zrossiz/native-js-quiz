@@ -1060,7 +1060,7 @@ const renderResults = () => {
 
         return `
             <div class="quality-item">
-                <span class="quality-item__percent">${determinationPercent.toFixed(1)}%</span>
+                <span class="quality-item__percent">${determinationPercent.toFixed(1) + 1}%</span>
                 <span class="quality-item__title">Целеустремленность</span>
             </div>
             <div class="quality-item">
