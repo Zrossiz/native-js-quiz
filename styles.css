@@ -55,3 +55,8 @@
 .answer--invalid {
     color: red;
 }
+
+/*
+.answer-wrapper input[type=radio] {
+    display: none;
+}*/

@@ -446,10 +446,12 @@ const renderQuestions = (index) => {
 
     const renderAnswers = () => DATA[index].answers.map((answer) => `
              <li>
-                <label>
-                    <input class="answer-input" type="radio" name=${index} value=${answer.id} data-quality=${answer.quality} data-direction=${answer.direction}>
-                    ${answer.value}
-                </label>
+                <div class="answer-wrapper">
+                    <input id="radio-${answer.id}" class="answer-input" type="radio" name=${index} value=${answer.id} data-quality=${answer.quality} data-direction=${answer.direction}>
+                    <label for="radio-${answer.id}">
+                        ${answer.value}
+                    </label>
+                </div>
             </li>
         `
       ).join('')
@@ -469,10 +471,10 @@ const renderResults = () => {
     let resultTest = Object.entries(localResults).reduce((max, n) => n[1] > max[1] ? n : max)
 
     const renderQuality = () => {
-        const determinationPercent = qualityResults.determination * 100 / DATA.length
-        const perseverancePercent = qualityResults.perseverance * 100 / DATA.length
-        const prudencePercent = qualityResults.prudence * 100 / DATA.length
-        const initiativePercent = qualityResults.initiative * 100 / DATA.length
+        const determinationPercent = qualityResults.determination * 99 / DATA.length
+        const perseverancePercent = qualityResults.perseverance * 99 / DATA.length
+        const prudencePercent = qualityResults.prudence * 99 / DATA.length
+        const initiativePercent = qualityResults.initiative * 99 / DATA.length
 
         return `
             Целеустремеленность: ${determinationPercent}%
@@ -494,7 +496,9 @@ const renderResults = () => {
 
         let recommendedCourses = data.map((item, index) => `
             <li>
-                ${item.title}        
+                <a href=${item.href}>
+                    ${item.title}  
+                </a>      
             </li>
         `).join('')
 
