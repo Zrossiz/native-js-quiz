@@ -855,13 +855,18 @@ const DATA_COURSES = [
         courses: [
             {
                 id: 1,
-                title: 'Государственная и муниципальная служба',
-                href: 'https://manepa.ru/instituty-i-fakultety/institut-gosudarstvennoj-sluzhby/gosudarstvennaya-i-munitsipalnaya-sluzhba/'
+                title: 'Антикризисное управление',
+                href: 'https://manepa.ru/instituty-i-fakultety/institut-gosudarstvennoj-sluzhby/antikrizisnoe-upravlenie/'
             },
             {
                 id: 2,
-                title: 'Государственное частное партнерство',
-                href: 'https://manepa.ru/instituty-i-fakultety/institut-gosudarstvennoj-sluzhby/gosudarstvenno-chastnoe-partnerstvo-/'
+                title: 'Государственная и муниципальная социальная политика',
+                href: 'https://manepa.ru/instituty-i-fakultety/institut-gosudarstvennoj-sluzhby/gosudarstvennaya-i-munitsipalnaya-sotsialnaya-politika/'
+            },
+            {
+                id: 3,
+                title: 'Государственная и муниципальная служба',
+                href: 'https://manepa.ru/instituty-i-fakultety/institut-gosudarstvennoj-sluzhby/gosudarstvennaya-i-munitsipalnaya-sluzhba/'
             }
         ]
     },
@@ -870,18 +875,18 @@ const DATA_COURSES = [
         courses: [
             {
                 id: 1,
-                title: 'Экономика и управление на предприятии',
-                href: 'https://google.com'
+                title: 'Экономика',
+                href: 'https://manepa.ru/instituty-i-fakultety/fakultet-ekonomiko-socialnyx-nauk/ekonomika-1/'
             },
             {
                 id: 2,
-                title: 'Управление и экономика в здравоохранении',
-                href: 'https://google.com'
+                title: 'Экономика и управление',
+                href: 'https://manepa.ru/instituty-i-fakultety/fakultet-ekonomiko-socialnyx-nauk/ekonomika-i-upravlenie_/'
             },
             {
                 id: 3,
-                title: 'Менеджмент и экономика в образовательном учреждении',
-                href: 'https://google.com'
+                title: 'ММенеджмент и экономика в образовательном учреждении',
+                href: 'https://manepa.ru/instituty-i-fakultety/fakultet-gumanitarno-pedagogicheskix-nauk/menedzhment-i-ekonomika-v-obrazovatelnom-uchrezhdenii/'
             }
         ]
     },
@@ -901,7 +906,7 @@ const DATA_COURSES = [
             {
                 id: 2,
                 title: 'Управление персоналом',
-                href: 'https://google.com'
+                href: 'https://manepa.ru/instituty-i-fakultety/institut-delovogo-administrirovaniya/upravlenie-personalom-1/'
             }
         ]
     },
@@ -911,12 +916,12 @@ const DATA_COURSES = [
             {
                 id: 1,
                 title: 'Эксперт в сфере закупок',
-                href: 'https://google.com'
+                href: 'https://manepa.ru/instituty-i-fakultety/institut-vysshaya-shkola-gosudarstvennogo-i-municipalnogo-upravleniya/obuchenie-po-programme-ekspert-v-sfere-zakupok/'
             },
             {
                 id: 2,
                 title: 'Специалист по закупкам',
-                href: 'https://google.com'
+                href: 'https://manepa.ru/instituty-i-fakultety/fakultet-ekonomiko-socialnyx-nauk/spetsialist-po-zakupkam/'
             }
         ]
     },
@@ -925,18 +930,13 @@ const DATA_COURSES = [
         courses: [
             {
                 id: 1,
-                title: 'Бухгалтерский учет',
-                href: 'https://manepa.ru/instituty-i-fakultety/fakultet-ekonomiko-socialnyx-nauk/bukhgalterskiy-uchet/'
+                title: 'Бухгалтерский учет и экономический анализ',
+                href: 'https://manepa.ru/instituty-i-fakultety/fakultet-ekonomiko-socialnyx-nauk/bukhgalterskiy-uchet-i-ekonomicheskiy-analiz/'
             },
             {
                 id: 2,
                 title: 'Бухгалтерский учет, анализ и аудит',
-                href: 'https://manepa.ru/instituty-i-fakultety/fakultet-ekonomiko-socialnyx-nauk/bukhgalterskiy-uchet-i-ekonomicheskiy-analiz/'
-            },
-            {
-                id: 3,
-                title: 'Экономика и бухгалтерский учет',
-                href: 'https://manepa.ru/instituty-i-fakultety/fakultet-ekonomiko-socialnyx-nauk/ekonomika-i-bukhgalterskiy-uchet/'
+                href: 'https://manepa.ru/instituty-i-fakultety/fakultet-ekonomiko-socialnyx-nauk/bukhgalterskiy-uchet-analiz-i-audit/'
             }
         ]
     },
@@ -945,13 +945,18 @@ const DATA_COURSES = [
         courses: [
             {
                 id: 1,
-                title: 'Контроллер технического состояния',
+                title: 'Контролер технического состояния автотранспортных средств',
                 href: 'https://manepa.ru/instituty-i-fakultety/inzhenerno-texnicheskij-institut/kontroler-tekhnicheskogo-sostoyaniya-avtotransportnykh-sredstv/'
             },
             {
                 id: 2,
                 title: 'Логистика',
                 href: 'https://manepa.ru/instituty-i-fakultety/fakultet-upravleniya-i-marketinga/logistika/'
+            },
+            {
+                id: 3,
+                title: 'Ответственный за обеспечение безопасности дорожного движения',
+                href: 'https://manepa.ru/instituty-i-fakultety/inzhenerno-texnicheskij-institut/otvetstvennyy-za-obespechenie-bezopasnosti-dorozhnogo-dvizheniya/'
             }
         ]
     },
@@ -1011,6 +1016,7 @@ const indicator = document.getElementById('indicator')
 const results = document.getElementById('results')
 const btnNext = document.getElementById('btn-next')
 const btnRestart = document.getElementById('btn-restart')
+const imagesWrapper = document.getElementById('images-wrapper')
 
 let currentAnswer;
 
@@ -1053,14 +1059,14 @@ const renderResults = () => {
     let resultTest = Object.entries(localResults).reduce((max, n) => n[1] > max[1] ? n : max)
 
     const renderQuality = () => {
-        const determinationPercent = qualityResults.determination * 99 / DATA.length
+        const determinationPercent = qualityResults.determination * 99 / DATA.length + 1
         const perseverancePercent = qualityResults.perseverance * 99 / DATA.length
         const prudencePercent = qualityResults.prudence * 99 / DATA.length
         const initiativePercent = qualityResults.initiative * 99 / DATA.length
 
         return `
             <div class="quality-item">
-                <span class="quality-item__percent">${determinationPercent.toFixed(1) + 1}%</span>
+                <span class="quality-item__percent">${determinationPercent.toFixed(1)}%</span>
                 <span class="quality-item__title">Целеустремленность</span>
             </div>
             <div class="quality-item">
@@ -1147,6 +1153,7 @@ quiz.addEventListener('click', (e) => {
             results.classList.add('results--visible')
             btnNext.classList.add('btn-next--hidden')
             btnRestart.classList.add('btn-restart--visible')
+            imagesWrapper.classList.add('hidden')
             renderResults()
         } else {
             renderQuestions(nextQuestionIndex)
@@ -1162,6 +1169,7 @@ quiz.addEventListener('click', (e) => {
         results.classList.remove('results--visible')
         btnNext.classList.remove('btn-next--hidden')
         btnRestart.classList.remove('btn-restart--visible')
+        imagesWrapper.classList.remove('hidden')
 
         results.innerHTML = ''
         localResults = {

@@ -7,12 +7,32 @@ a {
     color: #000
 }
 
+.hidden {
+    display: none !important;
+}
+
 .quiz {
     background-color: #f1f1f1;
     padding: 20px 60px;
     border-radius: 10px;
     width: 80%;
     margin: 100px auto;
+}
+
+.quiz-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.quiz-images {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 50%;
+}
+
+.quiz-images img {
+    width: 300px;
 }
 
 .quiz-questions, .quiz-results {
@@ -208,6 +228,11 @@ a {
 }
 
 @media(max-width: 850px) {
+
+    .quiz-images {
+        display: none;
+    }
+
     .results-quality {
         flex-wrap: wrap;
     }
